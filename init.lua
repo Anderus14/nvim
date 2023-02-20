@@ -17,3 +17,4 @@ end
 if is_wsl then
   require('craftzdog.wsl')
 end
+vim.opt.shell = 'powershell.exe'
