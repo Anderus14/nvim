@@ -92,3 +92,9 @@ cmp.setup({
     { name = 'buffer' },
   })
 })
+keymap.set('n', '<F5>', ":lua require'dap'.continue()<CR>")
+keymap.set('n', '<F10>', ":lua require'dap'.step_over()<CR>")
+keymap.set('n', '<F11>', ":lua require'dap'.step_into()<CR>")
+keymap.set('n', '<F12>', ":lua require'dap'.step_out()<CR>")
+keymap.set('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>")
+keymap.set('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")

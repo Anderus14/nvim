@@ -4,7 +4,7 @@ if (not status) then
   return
 end
 
-vim.cmd [[packadd packer.nvim]]
+vim.cmd('packadd packer.nvim')
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -51,4 +51,12 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   use 'nvim-tree/nvim-tree.lua'
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use {
+    "klen/nvim-test",
+    config = function()
+      require('nvim-test').setup()
+    end
+  }
 end)
